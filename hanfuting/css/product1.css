@@ -1,0 +1,148 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    --s: 70px; /* control the size */
+    --c: #6B5344;
+    
+    --_l: #0000 46%,var(--c) 47% 53%,#0000 54%;
+    background:
+      radial-gradient(100% 100% at 100% 100%,var(--_l)) var(--s) var(--s),
+      radial-gradient(100% 100% at 0    0   ,var(--_l)) var(--s) var(--s),
+      radial-gradient(100% 100%,#0000 22%,var(--c) 23% 29%, #0000 30% 34%,var(--c) 35% 41%,#0000 42%)
+      #F8ECC9;
+    background-size: calc(var(--s)*2) calc(var(--s)*2);
+    min-width: 1200px;
+    
+}
+.one{
+	width: 100%;
+	height: 200px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.active{
+	position: relative;
+	list-style: none;
+	width: 652px;
+	height: 52px;
+	display: flex;
+	top: 65px;
+	background-color: rgba(255,255,255,.85);
+	border-radius: 5px;
+	
+}
+.active li{
+	flex-grow: 1;
+	width: 91px;
+	height: 100%;
+	text-align: center;
+	border-radius: 10px ;
+	line-height: 45px;
+	display: flex;
+	justify-content: center;
+	transition: all 0.3s;
+}
+.active li a{
+	text-align: center;
+	width: 102px;
+	height: 52px;
+	transition: all 0.3s;
+	color: #333;
+	text-decoration: none;
+	display: block;
+	height: 100%;
+	border-radius: 4px;
+	line-height: 52px;
+
+	transition: .2s;
+}
+.active li:hover, .active a:hover{
+	background-color: #000000;
+	color: #fff;
+}
+.active li:hover a{
+	color: #fff;
+}
+  form {
+    background-color: #fff;
+    border-radius: 5px;
+}
+  
+  input {
+    all: unset;
+    font: 25px;
+    width: 80%;
+    padding: 6px 10px;
+  }
+  
+  ::placeholder {
+    color: rgb(0, 0, 0);
+    opacity: 0.8; 
+  }
+#searchbtn {
+    all: unset;
+    padding: 2px;
+    cursor: pointer;
+    float: right;
+  }
+
+
+.card {
+    padding: 2rem;
+    background-color: #4878e7;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+@media(max-width:768px) {
+    .card {
+        width: 100%;
+        padding: 1.5rem;
+    }
+    li{
+        padding: 0;
+    }
+}
+
+.row {
+    margin: 0;
+}
+
+.path {
+    color: grey;
+    margin-bottom: 1rem;
+}
+
+.path a {
+    color: #ffffff;
+}
+
+.list-group-item{
+    color: white;
+    border: none;
+    background-color: transparent;
+}
+a:hover{
+    text-decoration: none;
+}
+.list-group-item:hover{
+    color: rgb(241, 245, 0);
+   
+}
+#basic-text1{
+    background-color: yellow;
+}
+#demo{
+    margin-top: 100px;
+}

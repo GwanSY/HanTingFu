@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>纪录片·Documentary</title>
+	<link rel="shortcut icon" href="img/logo/main.ico" />
+	<style>
+		body {
+			background-image: url("./img//documantary.jpg");
+			background-size: cover;
+			margin: 0;
+		}
+		.container {
+			background-color: rgba(255, 255, 255, 0.5);
+			border: 5px solid white;
+			padding: 20px;
+			margin: 50px;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+		}
+		h1 {
+			font-family: Arial, sans-serif;
+			color: white;
+			text-align: center;
+			padding-top: 50px;
+			margin-bottom: 20px;
+			text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+		}
+		h2 {
+			font-family: Arial, sans-serif;
+			color: #333;
+			margin-top: 30px;
+			text-align: center;
+		}
+		ul {
+			margin-left: 30px;
+			font-size: 20px;
+			text-align: center;
+		}
+		a {
+			color: #333;
+			text-decoration: none;
+			transition: color 0.3s ease;
+			
+		}
+		.rounded-box:hover {
+			color: #333;
+			font-size:20.5px;
+		}
+		.rounded-box {
+			display: inline-block;
+			padding: 10px 15px;
+			background-color: #e1b2a4;
+			border-radius: 20px;
+			border: 1px solid #ccc;
+			
+		}
+/* .active {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  width: 70%;
+  height: 52px;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 5px;
+} */
+.active {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  width: 70%;
+  height: 52px;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 5px;
+}
+.active li{
+	flex-grow: 1;
+	width: 91px;
+	height: 100%;
+	text-align: center;
+	border-radius: 10px ;
+	line-height: 45px;
+	display: flex;
+	justify-content: center;
+	transition: all 0.3s;
+}
+.active li a{
+	text-align: center;
+	width: 102px;
+	height: 52px;
+	transition: all 0.3s;
+	color: #333;
+	text-decoration: none;
+	display: block;
+	height: 100%;
+	border-radius: 4px;
+	line-height: 52px;
+	transition: .2s;
+	font-size: 16px;
+}
+.active li:hover, .active a:hover{
+	background-color: #000000;
+	color: #fff;
+}
+.active li:hover a{
+	color: #fff;
+}
+.menu1 {
+	position: relative;
+	display: inline-block;
+  }
+  
+  .menu1:hover .submenu {
+	display: block; /* 鼠标悬浮时显示子菜单 */
+  }
+  
+  .submenu {
+	position: absolute;
+	top: 100px;
+	left: 0;
+	display: none;
+	width: 160px;
+	padding: 5px;
+	background-color: rgba(0, 0, 0, 0.8); /* 半透明背景色 */
+	color: #fff;
+	border-radius: 4px;
+  }
+  
+  .submenu a {
+	display: block;
+	margin-bottom: 0px;
+	font-size: 14px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	transition: all 0.5s;
+  }
+  
+  .submenu a:hover {
+	background-color: #333; /* 鼠标悬浮时改变背景色 */
+  }
+	</style>
+</head>
+<body>
+	<div class="menu">
+		<!-- <div class="logo">
+			<img src="img/logo.png" />
+		</div> -->
+		<ul class="active">
+			<li>
+				<a href="main.html">首页<br>Home</a>
+			</li>
+			<li>
+				<div class="menu1">
+					<a href="#video-container">探索<br>Explore</a>
+					 <div class="submenu">
+					 <a href="main.html#video-container">演变 Evolution</a>
+					 <a href="succession.html">现代传承 Succession</a>
+					 <a href="main.html#influence">产生影响 Influence</a>
+					 <a href="documentary.html">更多了解 More</a>
+					 </div>
+				   </div>
+			  </li>
+			<li>
+				<a href="catalog.html">展览馆<br>Exhibition Hall</a>
+			</li>
+			<li>
+				<a href="product.html">相关周边<br>Culture</a>
+			</li>
+			<li>
+				<a href="http://8.140.56.57:2333/">聊天室<br>Communication</a>
+			</li>
+			<li>
+				<a href="contact.html">联系我们<br>Connection</a>
+			</li>
+		</ul>
+	<h1>相关资料</h1>
+	<h1>Documentary</h1>
+	<div class="container">
+		<h2>第一部分：汉服的魅力之影片展示</h2>
+			<ul>
+				<br/>
+				《布衣中国》<br/>
+				<div class="rounded-box"><a href="https://www.bilibili.com/video/BV1tW411J7EU/?vd_source=a5da2b83109e0d74b9d740ee78a82750">Click here to watch the film "Cloth China"</a></div><br/>
+				<br/>
+				《汉服：衣冠里的华夏》<br/>
+				<div class="rounded-box"><a href="http://v.china.com.cn/2017-11/09/content_41868474.htm">Click here to watch the film "Hanfu: The Crown of Clothes in Huaxia"</a></div><br/>
+				<br/>
+				《了不起的匠人》<br/>
+				<div class="rounded-box"><a href="https://list.youku.com/show/id_z1793314027ed11e69e2a.html">Click here to watch the film "The Amazing Craftsman"</a></div><br/>
+				<br/>
+			</ul>
+			<h2>第二部分：古风的艺术之汉服展览会</h2>
+			<ul>
+				<br/>
+				汉服博览会•修武<br/>
+				<div class="rounded-box"><a href="http://ent.china.com.cn/xwtt/detail2_2021_05/08/2784645.html">Click here to view the relevant reports of the Hanfu Expo</a></div><br/>
+				<br/>
+				武汉汉服展览会</a><br/>
+				<div class="rounded-box"><a href="http://www.hanfushow.com/index.aspx">Click here to view the relevant information of Wuhan Hanfu Exhibition</a></div><br/>
+				<br/>
+				CHIC2023春季国风服饰展<br/>
+				<div class="rounded-box"><a href="http://www.cnga.org.cn/html/lxss/2023/0322/55566.html?1679891067">Click here to view the relevant reports of the CHIC2023 Spring Chinese Fashion Exhibition</a></div><br/>
+				<br/>
+			</ul>
+			<h2>第三部分：汉服的魅力之书籍</h2>
+			<ul>
+				<br/>
+				《汉服归来》<br/>
+				<div class="rounded-box"><a href="https://book.douban.com/subject/26847440/">Click here to search for 'Return of Hanfu'</a></div><br/>
+				<br/>
+				《中国古代服饰研究》</a><br/>
+				<div class="rounded-box"><a href="https://book.douban.com/subject/10532822/">Click here to search for 'Research on Ancient Chinese Costume'</a></div><br/>
+				<br/>
+				《中国古代服饰史》</a><br/>
+				<div class="rounded-box"><a href="https://book.douban.com/subject/5951254/">Click here to search for 'History of Ancient Chinese Costume'</a></div><br/>
+				<br/>
+				《大明衣冠图志》</a><br/>
+				<div class="rounded-box"><a href="https://book.douban.com/subject/26751778/">Click here to search for the "Da Ming Clothes and Crown Atlas"</a></div><br/>
+				<br/>
+			</ul>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100vw;
+	height: 100vh;
+	background: radial-gradient(#292929, #0e0d0d);
+	font-family: "Titillium Web", sans-serif;
+	position: relative;
+	min-width: 1200px;
+	/* 	--pink: #ea4c89; */
+	--white: #ebebeb;
+	--pink: #d6157c;
+}
+
+header {
+	position: absolute;
+	width: 1400px;
+	left: 50%;
+	top: 5%;
+	transform: translateX(-50%);
+	padding: 10px;
+	display: grid;
+	grid-template-columns: 1fr 150px 150px 150px;
+	align-items: center;
+	z-index: 7;
+	color: var(--white);
+}
+.header-link {
+	position: relative; /* 相对定位 */
+	display: inline-block; /* 行内块元素 */
+	margin-left: 30px; /* 设置间距 */
+	color: #333;
+	text-decoration: none;
+  }
+  
+  /* 鼠标悬停时，出现半透明框 */
+  .header-link:hover::before {
+	content: "网页设计：关斯元 郭紫梦\A文创设计：原创\A图片来源：网络\A视频来源：网络\A指导老师：梁敏\A特别鸣谢摄影师——朱山尽"; /* 设置框内文字 */
+	position: absolute; /* 绝对定位 */
+	width: 200px; /* 设置透明框宽度 */
+	height: 30px; /* 设置透明框高度 */
+	top: 30px; /* 框位置 */
+	left: 0;
+	display: block; /* 块级元素 */
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.5); /* 半透明背景色 */
+	color: #fff;
+	white-space: pre-wrap; /* 设置 white-space 属性 */
+  }
+  
+  @media screen and (max-width: 1200px) {
+	.header-link {
+	  display: block; /* 移动端改为块级元素 */
+	  margin: 10px 0;
+	}
+  }
+header h4 {
+	font-size: 1.2rem;
+	color: var(--pink);
+	letter-spacing: 1px;
+	margin-left: 50px;
+}
+header p {
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	letter-spacing: 1px;
+	transition: 0.3s;
+}
+p:hover {
+	color: var(--pink);
+	cursor: pointer;
+}
+
+/* .container {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	max-width: 1400px;
+	height: 80%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-column-gap: 10px;
+	perspective: 1400px;
+} */
+.container {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	max-width: 1200px;
+	height: 80%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-column-gap: 10px;
+	perspective: 1200px;
+}
+
+
+.layer {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	max-width: 1400px;
+	height: 80%;
+	padding: 1em;
+	position: relative;
+	z-index: 5;
+	clip-path: polygon(3% 0, 40% 0%, 40% 100%, 0% 100%);
+}
+.layer h1 {
+	position: absolute;
+	top: 50%;
+	left: -270px;
+	transform: translate(0, -50%);
+	font-size: 3rem;
+	font-weight: 900;
+	color: var(--white);
+	text-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3);
+	letter-spacing: 5px;
+}
+.layer h1 span {
+	color: var(--pink);
+}
+.layer h2 {
+	position: absolute;
+	top: 50%;
+	left: -270px;
+	transform: translate(0, -50%);
+	font-size: 3rem;
+	font-weight: 900;
+	color: var(--white);
+	text-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3);
+	letter-spacing: 5px;
+}
+.layer h1 span {
+	color: var(--pink);
+}
+
+.cta {
+	position: absolute;
+	top: 70%;
+	left: 140px;
+	transform: translate(-360px, -70%);
+	width: 200px;
+	height: 50px;
+	padding: 0.5em;
+	border: 2px solid var(--white);
+	color: var(--white);
+	display: grid;
+	grid-template-columns: 1fr 30px;
+	align-items: center;
+	transition: background-color 0.3s;
+}
+.cta:hover {
+	cursor: pointer;
+	color: var(--pink);
+	background-color: var(--white);
+}
+.cta:hover > svg {
+	stroke: var(--pink);
+	stroke-width: 2;
+}
+.cta p {
+	text-transform: uppercase;
+	font-weight: 400;
+}
+.cta svg {
+	width: 20px;
+	height: 20px;
+	fill: none;
+	stroke: var(--white);
+}
+
+/* .panel {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transform-style: preserve-3d;
+	transform-origin: 50% 0;
+	transform: translateZ(0) translateX(0) rotateY(0deg);
+	position: relative;
+} */
+.panel {
+	width: 100%;
+	height:800px;
+	position: relative;
+	transform-style: preserve-3d;
+	transform-origin: 50% 0;
+	transform: translateZ(0) translateX(0) rotateY(0deg);
+	position: relative;
+}
+.panel::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
+}
+
+/* .front,
+.back {
+	width: 100%;
+	height: 100%;
+	background-image: url("../img/fm/3-2.png");
+	background-size: cover;
+	background-position: left top;
+	position: absolute;
+	backface-visibility: hidden;
+}
+
+.back {
+	transform: scaleX(-1) rotateY(180deg);
+} */
+.front,
+.back {
+	width: 100%;
+	height: 100%;
+	background-image: url("../img/fm/3-21.png");
+	/* background-size: cover; */
+	background-position: left top; /* Change the background position to center */
+	position: absolute;
+	backface-visibility: hidden;
+}
+
+.back {
+	transform: scaleX(-1) rotateY(180deg);
+}
+
+.panel:nth-child(1) .front {
+	background-position: 0 0;
+}
+.panel:nth-child(2) .front {
+	background-position: -37% 0;
+}
+.panel:nth-child(3) .front {
+	background-position: -74% 0;
+}
+.panel:nth-child(4) .front {
+	background-position: -100% 0;
+}
+
+.panel:nth-child(1) .back {
+	background-position: 70% 0;
+}
+.panel:nth-child(2) .back {
+	background-position: 52% 0;
+}
+.panel:nth-child(3) .back {
+	background-position: 26% 0;
+}
+.panel:nth-child(4) .back {
+	background-position: 0 0;
+}
+
+/* .panel:nth-child(1) .front {
+	background-position: 0 0;
+}
+.panel:nth-child(2) .front {
+	background-position: -300px 0;
+}
+.panel:nth-child(3) .front {
+	background-position: -550px 0;
+}
+.panel:nth-child(4) .front {
+	background-position: -800px 0;
+}
+
+.panel:nth-child(1) .back {
+	background-position: 300px 0;
+}
+.panel:nth-child(2) .back {
+	background-position: 550px 0;
+}
+.panel:nth-child(3) .back {
+	background-position: 800px 0;
+}
+.panel:nth-child(4) .back {
+	background-position: 0 0;
+} */
+
+footer {
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 5%;
+	padding: 10px;
+	display: grid;
+	place-items: center;
+	z-index: 6;
+}
+footer p {
+	font-size: 0.8rem;
+	color: #979797;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+footer a {
+	color: var(--pink);
+	text-decoration: none;
+}
+
+.replay {
+	cursor: pointer;
+	width: min-content;
+	font-size: 0.8rem;
+	color: var(--white);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 5px;
+	transform: translateY(-20px);
+}
+/* Add media queries for responsiveness */
+/* @media screen and (max-width: 1200px) {
+	.container {
+	  grid-template-columns: repeat(2, 1fr);
+	  grid-row-gap: 10px;
+	}
+  }
+  
+  @media screen and (max-width: 480px) {
+	.container {
+	  grid-template-columns: 1fr;
+	  grid-row-gap: 10px;
+	}
+  }
+  @media (max-width: 1200px) {
+	.front,
+	.back {
+	  background-image: url("../img/fm/3-2-mobile.png");
+	}
+  } */

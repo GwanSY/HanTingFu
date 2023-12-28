@@ -1,0 +1,384 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: calc(max(100vh, 400px));
+	padding: 0px;
+	color: #222;
+	font-family: "Plus Jakarta Sans", sans-serif;
+}
+.menu1 {
+	position: relative;
+	display: inline-block;
+  }
+  
+  .menu1:hover .submenu {
+	display: block; /* 鼠标悬浮时显示子菜单 */
+  }
+  
+  .submenu {
+	position: absolute;
+	top: 100px;
+	left: 0;
+	display: none;
+	width: 160px;
+	padding: 5px;
+	background-color: rgba(0, 0, 0, 0.8); /* 半透明背景色 */
+	color: #fff;
+	border-radius: 4px;
+  }
+  
+  .submenu a {
+	display: block;
+	margin-bottom: 0px;
+	font-size: 14px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	transition: all 0.5s;
+  }
+  
+  .submenu a:hover {
+	background-color: #333; /* 鼠标悬浮时改变背景色 */
+  }
+.container {
+	height: 100vh;
+	width: 100vw;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: block;
+	margin-bottom: 20px;
+}
+
+.active {
+	position: relative;
+	top: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+	list-style: none;
+	width: 70%;
+	height: 52px;
+	display: flex;
+	background-color: rgba(255, 255, 255, 0.85);
+	border-radius: 5px;
+  }
+
+  .active li{
+	flex-grow: 1;
+	width: 11px;
+	height: 100%;
+	text-align: center;
+	border-radius: 10px ;
+	line-height: 45px;
+	display: flex;
+	justify-content: center;
+	transition: all 0.3s;
+}
+.active li a{
+	text-align: center;
+	width: 150px;
+	height: 52px;
+	transition: all 0.3s;
+	color: #333;
+	text-decoration: none;
+	display: block;
+	height: 100%;
+	border-radius: 4px;
+	line-height: 52px;
+	transition: .2s;
+	font-size: 16px;
+}
+
+.active li:hover,
+.active a:hover {
+	background-color: #000000;
+	color: #fff;
+}
+
+.active li:hover a {
+	color: #fff;
+}
+
+.article {
+	width: 100%;
+	max-width: 1000px;
+}
+
+.header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	min-height: 400px;
+	padding: 50px;
+	border-radius: 16px;
+	color: #fff;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.upper-header {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 20px;
+}
+
+.mini-title {
+	font-size: 1.125rem;
+	font-weight: bold;
+	letter-spacing: 0.4rem;
+	text-transform: uppercase;
+	opacity: 0.9;
+}
+
+.date-since {
+	display: flex;
+	align-items: center;
+	opacity: 0.5;
+	font-size: 0.875rem;
+}
+
+.date-value {
+	display: inline-block;
+	padding-bottom: 2px;
+}
+
+svg {
+	width: 20px;
+	margin-left: 10px;
+}
+
+.lower-header {
+	padding-top: 50px;
+}
+
+.tags-container {
+	display: flex;
+	align-items: center;
+	opacity: 0.75;
+	margin-bottom: 12px;
+}
+
+.tags-container>span:not(:nth-child(2))::before {
+	content: ", ";
+}
+
+.tags-container svg {
+	width: 20px;
+	margin-right: 10px;
+}
+
+.tags-container span {
+	font-size: 0.875rem;
+}
+
+.title {
+	margin: 20px 0;
+	font-size: 3rem;
+	font-weight: bold;
+	opacity: 0.9;
+}
+
+.subtitle {
+	width: 50%;
+	margin-top: 10px;
+	opacity: 0.75;
+	line-height: 1.75;
+}
+
+.summary {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+	padding: 30px 50px;
+	border-radius: 16px;
+	box-shadow: 0 0 0 1px #f2f2f2;
+}
+
+.summary-item {
+	width: 100%;
+	padding-right: 20px;
+}
+
+.item-title {
+	color: #999;
+}
+
+.item-text {
+	margin-top: 12px;
+	font-size: 1.5rem;
+}
+
+
+.main-article {
+	width: 100%;
+	margin-top: 50px;
+	padding-bottom: 50px;
+	line-height: 1.75;
+}
+
+.main-article h4 {
+	margin-top: 60px;
+	margin-bottom: 20px;
+	font-size: 1.25em;
+}
+
+.main-article p {
+	margin-bottom: 20px;
+	color: #777;
+	font-size: 1.125em;
+}
+
+.main-article blockquote {
+	position: relative;
+	margin: 40px 0;
+	padding: 40px;
+	background-color: #f8f8f8;
+	border-radius: 16px;
+}
+
+.main-article blockquote::before {
+	content: url("https://icons.craftwork.design/static/media/QuotesFill.f65b03951f44e212816420b00909f4df.svg");
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	transform: scale(2);
+	opacity: 0.1;
+}
+
+.main-article blockquote ::after {
+	content: url("https://icons.craftwork.design/static/media/QuotesFill.f65b03951f44e212816420b00909f4df.svg");
+	position: absolute;
+	bottom: -10px;
+	right: -10px;
+	transform: scale(2) rotate(180deg);
+	opacity: 0.1;
+}
+
+.gallery {
+	display: grid;
+	gap: 20px;
+	grid-template-areas:
+		"img1 img1 img2 img3"
+		"img1 img1 img4 img5";
+	min-height: 400px;
+	margin-top: 40px;
+}
+
+.image-item {
+	min-height: 200px;
+	background-color: #eee;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 8px;
+	transition: 250ms;
+}
+
+.image-item:hover {
+	opacity: 0.9;
+	cursor: pointer;
+}
+
+.image-1 {
+	grid-area: img1;
+}
+
+.image-2 {
+	grid-area: img2;
+}
+
+.image-3 {
+	grid-area: img3;
+}
+
+.image-4 {
+	grid-area: img4;
+}
+
+.image-5 {
+	grid-area: img5;
+}
+
+.gallery-mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100vw;
+	height: 100vh;
+	padding: 40px;
+	background-color: #22222288;
+	transition: 500ms;
+}
+
+.gallery-mask img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	transition: 500ms;
+}
+
+.mask-off {
+	visibility: hidden;
+	background-color: #22222200;
+}
+
+.mask-off img {
+	visibility: hidden;
+	opacity: 0;
+}
+
+@media screen and (max-width: 1024px) {
+	body {
+		padding: 50px;
+	}
+
+	.article header .lower-header .subtitle {
+		width: 100%;
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+	body article {}
+
+	header .lower-header .title {
+		word-break: break-all;
+	}
+
+	.summary {
+		flex-direction: column;
+	}
+
+	.summary-item:not(:last-child) {
+		padding-bottom: 30px;
+	}
+
+	.main-article {}
+
+	.gallery {
+		grid-template-areas:
+			"img1 img1"
+			"img1 img1"
+			"img2 img3"
+			"img4 img5";
+	}
+
+}
+
+@media screen and (max-width: 425px) {
+	body {
+		padding: 25px;
+	}
+
+	body article header .upper-header .date-since {
+		display: none;
+	}
+}
